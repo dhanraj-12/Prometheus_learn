@@ -40,7 +40,7 @@ export function prometheusMiddleware(req: Request, res: Response, next: NextFunc
       method: req.method,
       route: req.route ? req.route.path : req.originalUrl,
       status_code: res.statusCode
-    }, duration / 1000);
+    }, duration / 1000  );
     activerequestsGauge.dec();
   })
 
